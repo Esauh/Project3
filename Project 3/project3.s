@@ -17,3 +17,6 @@ li $v0, 8 #number of char to read from input
 la $a0, str #space for input
 li $a1, 1001
 syscall
+
+li $s2, 0 #counter
+add $s3, $s2, $zero #initializing counter further
