@@ -26,3 +26,7 @@ li $t0, 1000
 beq $s3, $t0, enter_after
 la $a1, str	#load input into register
 add $a1, $a1, $s3
+lb $a1, 0($a1) #load char into a1
+beq $a1, 10, enter_after #goes to after enter
+addi $s3, $s3, 1
+j check_first
