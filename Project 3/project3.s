@@ -115,3 +115,9 @@ bne $t7, $zero, invalid
 add $t6, $t4, $zero #counter
 li $t7, 0  #total
 addi $t5, $t5, -4
+
+convert:
+beq $t6, $t5, after_convert
+lw $a1, 0($t6) #head of faux stack pointer
+sgt $t1, $a1, 64 #uppercase convert
+addi $a2, $s1, 65
