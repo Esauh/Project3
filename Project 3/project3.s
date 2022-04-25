@@ -70,3 +70,9 @@ la $a0, 44 #44 corresponds to the comma which will be outputted
 syscall
 addi $t0, $t0, 4
 j get_char
+
+again:
+addi $sp, $sp, -4
+sw $a1, 0($sp) #stores a1 onto top of the stack
+addi $t0, $t0, 4
+j get_char
