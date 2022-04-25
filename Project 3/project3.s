@@ -105,3 +105,9 @@ or $t6, $t6, $t7
 beq $t6, $zero, after_trail
 addi $t5, $t5, 4
 j before_trailing
+
+after_trail:
+sub $t6, $t4, $t5 #length of substring
+slt $t7, $t6, 0	#substring less than 0
+sgt $t8, $t6, 12 #substring greater than 12
+or $t7, $t7, $t8
