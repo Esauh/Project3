@@ -30,3 +30,8 @@ lb $a1, 0($a1) #load char into a1
 beq $a1, 10, enter_after #goes to after enter
 addi $s3, $s3, 1
 j check_first
+
+enter_after:
+ addi $s3, $s3, -1
+ add $t0, $s3, $zero #count set to t0
+ addi $s4, $sp, 0 #stack head
