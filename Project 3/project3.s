@@ -174,6 +174,12 @@ la $a0, error
 syscall
 j return_to
 
+add_total:
+li $v0, 1 #add to grant total
+move $a0, $t7
+syscall
+j return_to
+
 return_to:
 jr $ra
 
