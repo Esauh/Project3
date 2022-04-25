@@ -58,3 +58,10 @@ sub_a:
 addi $s5, $sp, 0 #head of the stack
 add, $t0, $s5, $zero #counter set
 move $t9, $ra
+
+get_char:
+beq $t0, $s4, after_char
+lw $a1, 0($t0) #places the current char into register for arugment
+li $t1, 59 #stores the decimal value for semicolon into t1
+bne $a1, $t1, again #sees if char is equal to 59 then goes to again procedure
+
