@@ -157,6 +157,12 @@ add $t6, $zero, $zero
 j end #jump to end procedure
 
 end:
+
 pop:
 beq $sp, $s5, fin_pop
 addi $sp, $sp, 4
+j pop
+
+fin_pop:
+beq $t6, $zero, disp #space added after pop
+j add_total
