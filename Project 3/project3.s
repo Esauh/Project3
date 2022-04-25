@@ -145,3 +145,7 @@ mflo $v1
 jal checker
 move $ra, $t1 #change the return address
 add $t7, $t7, $v0
+addi $t6, $t6, -4 #increment
+j convert
+
+
