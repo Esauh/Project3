@@ -200,5 +200,9 @@ addiu $a1, $a1, -87	#convert for lowercase
 j finished
 
 upper:
+addiu $a1, $a1, -55	#convert for uppercase
+j finished
 num:
+addiu $a1, $a1, -48	#convert for numbers
+j finished
 
