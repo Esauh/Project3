@@ -194,3 +194,11 @@ slt $a3, $a1, 58
 and $t8, $t8, $a3
 bne $t8, $zero, num
 j num
+
+lower:
+addiu $a1, $a1, -87	#convert for lowercase
+j finished
+
+upper:
+num:
+
