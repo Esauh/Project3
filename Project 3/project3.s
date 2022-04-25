@@ -121,3 +121,8 @@ beq $t6, $t5, after_convert
 lw $a1, 0($t6) #head of faux stack pointer
 sgt $t1, $a1, 64 #uppercase convert
 addi $a2, $s1, 65
+slt $t8, $a1, $a2
+and $a3, $t1, $t8
+sgt $t1, $a1, 96 #if greater than 96 its lowercase
+addi $a2, $s1, 97 #converts
+slt $t8, $a1, $a2
