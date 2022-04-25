@@ -53,3 +53,8 @@ jal sub_a
 exit:
 li $v0, 10
 syscall
+
+sub_a:
+addi $s5, $sp, 0 #head of the stack
+add, $t0, $s5, $zero #counter set
+move $t9, $ra
