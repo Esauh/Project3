@@ -82,3 +82,5 @@ addi $s6, $sp, 0 #make $s6 a faux stack
 add $t2, $s5, $zero
 addi $t3, $s6, -4 #moves faux stack
 addi $t2, $t2, -4 #moves $t2
+add $t4, $t2, $zero
+add $t5, $s6, $zero
