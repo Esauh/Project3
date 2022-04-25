@@ -13,9 +13,9 @@ addi $s0, $zero, 29
 addi $s1, $zero, 19 #bases used for rest of program
 
 get_input:
-li $v0, 8 #number of char to read from input
+li $v0, 8
 la $a0, str #space for input
-li $a1, 1001
+li $a1, 1001 #number of char to read from input 1001-1 = 1000
 syscall
 
 li $s2, 0 #counter
@@ -64,4 +64,8 @@ beq $t0, $s4, after_char
 lw $a1, 0($t0) #places the current char into register for arugment
 li $t1, 59 #stores the decimal value for semicolon into t1
 bne $a1, $t1, again #sees if char is equal to 59 then goes to again procedure
+jal sub_b #jump to sub_b and saves position to $ra
+li $v0, 11
+la $a0, 44 #44 corresponds to the comma which will be outputted
+syscall
 
