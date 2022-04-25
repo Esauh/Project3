@@ -206,3 +206,9 @@ num:
 addiu $a1, $a1, -48	#convert for numbers
 j finished
 
+finished:
+li $t8, 0  #count initialized
+li $v0, 1
+slt $a3, $t8, $v1
+beq $a3, $zero, after
+
