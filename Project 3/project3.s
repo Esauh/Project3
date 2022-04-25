@@ -131,3 +131,7 @@ sgt $t1, $a1, 47 #if greater than 47 its a number
 li $a2, 58
 slt $t8, $a1, $a2
 and $t1, $t1, $t8
+or $a3, $a3, $s7
+or $a3, $a3, $t1
+beq $a3, $zero, invalid
+move $a0, $t6
