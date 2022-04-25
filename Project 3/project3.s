@@ -44,3 +44,8 @@ la $a1, str
 add $a1, $a1, $t0
 lb $a1, 0($a1) #makes a1 the current char
 sw $a1, 0($sp)
+addi $t0, $t0, -1
+j check_null
+
+after_null:
+jal sub_a
