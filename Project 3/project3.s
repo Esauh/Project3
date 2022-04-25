@@ -135,3 +135,9 @@ or $a3, $a3, $s7
 or $a3, $a3, $t1
 beq $a3, $zero, invalid
 move $a0, $t6
+move $t1, $ra #set $t1 to return address
+li $a2, 0
+addi $a2, $t5, 4
+sub $a2, $t6, $a2 #length
+li $s7, 4
+
