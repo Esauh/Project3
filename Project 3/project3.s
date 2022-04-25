@@ -20,3 +20,9 @@ syscall
 
 li $s2, 0 #counter
 add $s3, $s2, $zero #initializing counter further
+
+check_first:
+li $t0, 1000
+beq $s3, $t0, enter_after
+la $a1, str	#load input into register
+add $a1, $a1, $s3
