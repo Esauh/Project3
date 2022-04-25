@@ -68,4 +68,5 @@ jal sub_b #jump to sub_b and saves position to $ra
 li $v0, 11
 la $a0, 44 #44 corresponds to the comma which will be outputted
 syscall
-
+addi $t0, $t0, 4
+j get_char
