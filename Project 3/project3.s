@@ -172,3 +172,6 @@ li $v0, 4
 la $a0, error
 syscall
 j return_to
+
+return_to:
+jr $ra
