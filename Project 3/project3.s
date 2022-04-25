@@ -32,10 +32,15 @@ addi $s3, $s3, 1
 j check_first
 
 enter_after:
- addi $s3, $s3, -1
- add $t0, $s3, $zero #count set to t0
- addi $s4, $sp, 0 #stack head
+addi $s3, $s3, -1
+add $t0, $s3, $zero #count set to t0
+addi $s4, $sp, 0 #stack head
 
 check_null:
- slt $t1, $t0, $s2 #checks count
- bne $t1, $zero, after_null
+slt $t1, $t0, $s2 #checks count
+bne $t1, $zero, after_null
+addi $sp, $sp, -4
+la $a1, str
+add $a1, $a1, $t0
+lb $a1, 0($a1) #makes a1 the current char
+sw $a1, 0($sp)
