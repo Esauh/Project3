@@ -49,3 +49,7 @@ j check_null
 
 after_null:
 jal sub_a
+
+exit:
+li $v0, 10
+syscall
