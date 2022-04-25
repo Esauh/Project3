@@ -126,3 +126,8 @@ and $a3, $t1, $t8
 sgt $t1, $a1, 96 #if greater than 96 its lowercase
 addi $a2, $s1, 97 #converts
 slt $t8, $a1, $a2
+and $s7, $t1, $t8
+sgt $t1, $a1, 47 #if greater than 47 its a number
+li $a2, 58
+slt $t8, $a1, $a2
+and $t1, $t1, $t8
