@@ -154,3 +154,9 @@ j end #jump to end procedure
 
 invalid:
 add $t6, $zero, $zero
+j end #jump to end procedure
+
+end:
+pop:
+beq $sp, $s5, fin_pop
+addi $sp, $sp, 4
