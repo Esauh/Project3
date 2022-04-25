@@ -95,3 +95,9 @@ addi $t4, $t4, -4
 j check_leading
 
 after_leading: #needed to implement space for stack nothing needed inside
+
+before_trailing:
+beq $t5, $s5, after_trail
+lw $a1, 0($t5)
+seq $t6, $a1, 32 #space
+seq $t7, $a1, 9	#tab
