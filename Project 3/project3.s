@@ -84,3 +84,9 @@ addi $t3, $s6, -4 #moves faux stack
 addi $t2, $t2, -4 #moves $t2
 add $t4, $t2, $zero
 add $t5, $s6, $zero
+
+check_leading:
+beq $t4, $t3, after_leading
+lw $a1, 0($t4) #loads the current character into argument
+seq $t6, $a1, 32
+seq $t7, $a1, 9
