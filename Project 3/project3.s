@@ -166,3 +166,9 @@ j pop
 fin_pop:
 beq $t6, $zero, disp #space added after pop
 j add_total
+
+disp: #procedure to print out the error message "-"
+li $v0, 4
+la $a0, error
+syscall
+j return_to
