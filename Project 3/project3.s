@@ -76,3 +76,9 @@ addi $sp, $sp, -4
 sw $a1, 0($sp) #stores a1 onto top of the stack
 addi $t0, $t0, 4
 j get_char
+
+sub_b:
+addi $s6, $sp, 0 #make $s6 a faux stack
+add $t2, $s5, $zero
+addi $t3, $s6, -4 #moves faux stack
+addi $t2, $t2, -4 #moves $t2
