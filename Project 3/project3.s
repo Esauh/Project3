@@ -88,5 +88,10 @@ add $t5, $s6, $zero
 check_leading:
 beq $t4, $t3, after_leading
 lw $a1, 0($t4) #loads the current character into argument
-seq $t6, $a1, 32
-seq $t7, $a1, 9
+seq $t6, $a1, 32 #space
+seq $t7, $a1, 9 #tab
+beq $t6, $zero, after_leading
+addi $t4, $t4, -4
+j check_leading
+
+after_leading: #needed to implement space for stack nothing needed inside
