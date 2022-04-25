@@ -212,3 +212,9 @@ li $v0, 1
 slt $a3, $t8, $v1
 beq $a3, $zero, after
 
+base_total:
+mult $v0, $s0
+mflo $v0
+addi $t8, $t8, 1
+slt $a3, $t8, $v1
+
