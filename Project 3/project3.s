@@ -140,4 +140,8 @@ li $a2, 0
 addi $a2, $t5, 4
 sub $a2, $t6, $a2 #length
 li $s7, 4
-
+div $a2, $s7
+mflo $v1
+jal checker
+move $ra, $t1 #change the return address
+add $t7, $t7, $v0
