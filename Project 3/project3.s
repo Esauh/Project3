@@ -148,4 +148,9 @@ add $t7, $t7, $v0
 addi $t6, $t6, -4 #increment
 j convert
 
+after_convert:
+li $t6, 1
+j end #jump to end procedure
 
+invalid:
+add $t6, $zero, $zero
