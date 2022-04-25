@@ -35,3 +35,7 @@ enter_after:
  addi $s3, $s3, -1
  add $t0, $s3, $zero #count set to t0
  addi $s4, $sp, 0 #stack head
+
+check_null:
+ slt $t1, $t0, $s2 #checks count
+ bne $t1, $zero, after_null
