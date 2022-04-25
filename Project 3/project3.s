@@ -101,3 +101,7 @@ beq $t5, $s5, after_trail
 lw $a1, 0($t5)
 seq $t6, $a1, 32 #space
 seq $t7, $a1, 9	#tab
+or $t6, $t6, $t7
+beq $t6, $zero, after_trail
+addi $t5, $t5, 4
+j before_trailing
