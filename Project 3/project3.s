@@ -68,6 +68,7 @@ jal sub_b #jump to sub_b and saves position to $ra
 li $v0, 11
 la $a0, 44 #44 corresponds to the comma which will be outputted
 syscall
+
 addi $t0, $t0, 4
 j get_char
 
@@ -217,4 +218,9 @@ mult $v0, $s0
 mflo $v0
 addi $t8, $t8, 1
 slt $a3, $t8, $v1
+bne $a3, $zero, base_total	#if 0, do again
 
+after:
+mult $a1, $v0
+mflo $v0
+jr $ra
